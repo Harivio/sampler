@@ -148,3 +148,50 @@ document.querySelectorAll(".file-upload").forEach((fileInput) => {
     fileNameSpan.textContent = fileName;
   });
 });
+
+async function getAudioOutputDevices() {
+  try {
+    // Get the list of media devices
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    const audioOutputDevices = devices.filter(
+      (device) => device.kind === "audiooutput"
+    );
+
+    const deviceSelector = document.getElementById("audio-output");
+
+    // Populate the dropdown with audio output devices
+    audioOutputDevices.forEach((device) => {
+      const option = document.createElement("option");
+      option.value = device.deviceId;
+      option.textContent = device.label || `Device ${device.deviceId}`;
+      deviceSelector.appendChild(option);
+    });
+
+    // Handle device selection
+    deviceSelector.addEventListener("change", async (event) => {
+      const selectedDeviceId = event.target.value;
+
+      try {
+        if (selectedDeviceId) {
+          // Set the sink ID for the masterGain output if supported
+          const audioElement = new Audio();
+          await audioElement.setSinkId(selectedDeviceId);
+          console.log(`Audio output set to: ${selectedDeviceId}`);
+        } else {
+          console.log("Default audio output selected.");
+        }
+      } catch (error) {
+        console.error("Error setting audio output device:", error);
+      }
+    });
+  } catch (error) {
+    console.error("Error accessing media devices:", error);
+  }
+}
+
+// Call the function to populate the dropdown on page load
+getAudioOutputDevices();
+
+navigator.mediaDevices.enumerateDevices().then((devices) => {
+  console.log(devices.filter((device) => device.kind === "audiooutput"));
+});
