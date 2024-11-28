@@ -149,49 +149,32 @@ document.querySelectorAll(".file-upload").forEach((fileInput) => {
   });
 });
 
-async function getAudioOutputDevices() {
-  try {
-    // Get the list of media devices
-    const devices = await navigator.mediaDevices.enumerateDevices();
-    const audioOutputDevices = devices.filter(
-      (device) => device.kind === "audiooutput"
-    );
+const selectDeviceButton = document.getElementById("select-device");
+const outputStatus = document.getElementById("output-status");
 
-    const deviceSelector = document.getElementById("audio-output");
-
-    // Populate the dropdown with audio output devices
-    audioOutputDevices.forEach((device) => {
-      const option = document.createElement("option");
-      option.value = device.deviceId;
-      option.textContent = device.label || `Device ${device.deviceId}`;
-      deviceSelector.appendChild(option);
-    });
-
-    // Handle device selection
-    deviceSelector.addEventListener("change", async (event) => {
-      const selectedDeviceId = event.target.value;
-
-      try {
-        if (selectedDeviceId) {
-          // Set the sink ID for the masterGain output if supported
-          const audioElement = new Audio();
-          await audioElement.setSinkId(selectedDeviceId);
-          console.log(`Audio output set to: ${selectedDeviceId}`);
-        } else {
-          console.log("Default audio output selected.");
-        }
-      } catch (error) {
-        console.error("Error setting audio output device:", error);
-      }
-    });
-  } catch (error) {
-    console.error("Error accessing media devices:", error);
+selectDeviceButton.addEventListener("click", async () => {
+  if (!navigator.mediaDevices.selectAudioOutput) {
+    outputStatus.textContent =
+      "Audio output device selection is not supported in this browser.";
+    return;
   }
-}
 
-// Call the function to populate the dropdown on page load
-getAudioOutputDevices();
+  try {
+    const device = await navigator.mediaDevices.selectAudioOutput();
+    outputStatus.textContent = `Selected device: ${device.label}`;
+    // Update the destination of the audio context
+    const audioDestination = audioContext.createMediaStreamDestination();
+    masterGain.disconnect();
+    masterGain.connect(audioDestination);
 
-navigator.mediaDevices.enumerateDevices().then((devices) => {
-  console.log(devices.filter((device) => device.kind === "audiooutput"));
+    const deviceStream = new MediaStream();
+    deviceStream.addTrack(audioDestination.stream.getTracks()[0]);
+
+    const audio = new Audio();
+    audio.srcObject = deviceStream;
+    audio.setSinkId(device.deviceId);
+    audio.play();
+  } catch (err) {
+    outputStatus.textContent = `Error: ${err.name} - ${err.message}`;
+  }
 });

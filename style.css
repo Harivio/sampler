@@ -146,7 +146,7 @@ body {
 
 .band label {
   flex: 1;
-  text-align: right;
+  text-align: left;
   margin-right: 15px;
   font-size: 14px;
   color: #2b6777;
@@ -190,16 +190,23 @@ body {
   background: #005bb5;
 }
 
-.device-selector {
-  margin: 20px;
-  font-size: 14px;
-}
-.device-selector label {
-  margin-right: 10px;
-  font-weight: bold;
-}
-.device-selector select {
-  padding: 5px;
+#select-device {
+  background-color: #0078d7;
+  color: white;
+  padding: 10px 15px;
+  border: none;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+#select-device:hover {
+  background-color: #005bb5;
+}
+
+#output-status {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
 }
