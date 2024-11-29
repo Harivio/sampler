@@ -149,32 +149,7 @@ document.querySelectorAll(".file-upload").forEach((fileInput) => {
   });
 });
 
-const selectDeviceButton = document.getElementById("select-device");
-const outputStatus = document.getElementById("output-status");
-
-selectDeviceButton.addEventListener("click", async () => {
-  if (!navigator.mediaDevices.selectAudioOutput) {
-    outputStatus.textContent =
-      "Audio output device selection is not supported in this browser.";
-    return;
-  }
-
-  try {
-    const device = await navigator.mediaDevices.selectAudioOutput();
-    outputStatus.textContent = `Selected device: ${device.label}`;
-    // Update the destination of the audio context
-    const audioDestination = audioContext.createMediaStreamDestination();
-    masterGain.disconnect();
-    masterGain.connect(audioDestination);
-
-    const deviceStream = new MediaStream();
-    deviceStream.addTrack(audioDestination.stream.getTracks()[0]);
-
-    const audio = new Audio();
-    audio.srcObject = deviceStream;
-    audio.setSinkId(device.deviceId);
-    audio.play();
-  } catch (err) {
-    outputStatus.textContent = `Error: ${err.name} - ${err.message}`;
-  }
+document.getElementById("navbar-toggle").addEventListener("click", () => {
+  const navbarLinks = document.getElementById("navbar-links");
+  navbarLinks.classList.toggle("show"); // Toggle the 'show' class to display navbar items
 });

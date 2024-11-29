@@ -7,6 +7,20 @@
     <title>Sampler</title>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">Sampler</div>
+        <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>
+        <ul class="navbar-links" id="navbar-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="./userguide.html">User Guide</a></li>
+          <li><a href="./audioflow.html">Audio Flow</a></li>
+          <li><a href="./model.html">Function Model</a></li>
+          <li><a href="./copyright.html">Copyright</a></li>
+          <li><a href="./certification.html">Certification</a></li>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <div class="sampler">
         <div class="grid" data-sound="./sounds/kick.wav">
@@ -222,13 +236,12 @@
               id="volume"
             />
           </div>
-          <div class="output">
-            <button id="select-device">Select Output Device</button>
-            <p id="output-status"></p>
-          </div>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <p>&copy; 2024 Sampler</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
