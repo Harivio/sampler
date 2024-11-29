@@ -151,5 +151,5 @@ document.querySelectorAll(".file-upload").forEach((fileInput) => {
 
 document.getElementById("navbar-toggle").addEventListener("click", () => {
   const navbarLinks = document.getElementById("navbar-links");
-  navbarLinks.classList.toggle("show"); // Toggle the 'show' class to display navbar items
+  navbarLinks.classList.toggle("show");
 });

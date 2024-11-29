@@ -95,7 +95,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 2rem;
-  flex-grow: 1; /* This ensures the content area grows and pushes the footer down */
+  flex-grow: 1;
 }
 
 .sampler {
@@ -103,7 +103,7 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   flex: 2;
-  margin-right: 2rem; /* Added margin to create space between sampler and sidebar */
+  margin-right: 2rem;
 }
 
 .grid {
@@ -148,12 +148,12 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 300px; /* Increased width of the sidebar */
-  background-color: #d0eaff; /* Light blue background */
+  width: 300px;
+  background-color: #d0eaff;
   border: 1px solid #98cffc;
   padding: 1.5rem;
   border-radius: 8px;
-  flex: 1; /* Ensure it takes up available space */
+  flex: 1;
 }
 
 .settings {
@@ -165,7 +165,7 @@ body {
 .eq,
 .fx,
 .output {
-  background-color: #cce3de; /* Soft greenish-blue */
+  background-color: #cce3de;
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1.5rem;
