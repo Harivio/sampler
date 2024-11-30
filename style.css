@@ -129,6 +129,9 @@ body {
   display: block;
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  background-color: #b0d7ff;
+  border: 1px solid #98cffc;
+  border-radius: 8px;
 }
 
 .file-upload {
