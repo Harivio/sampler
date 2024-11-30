@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>User Guide</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">Sampler</div>
+        <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>
+        <ul class="navbar-links" id="navbar-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./userguide.html">User Guide</a></li>
+          <li><a href="./audioflow.html">Audio Flow</a></li>
+          <li><a href="./model.html">Function Model</a></li>
+          <li><a href="./copyright.html">Copyright</a></li>
+          <li><a href="./certification.html">Certification</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>User Guide</h1>
+      <div class="container-text">
+        <h2>Overview</h2>
+        <p>
+          <b>Sampler</b> is an online audio sampling tool designed to help you
+          create, edit, and manipulate custom sound patterns using a grid-based
+          interface. It takes advantage of the <b>Web Audio API</b> for smooth
+          and efficient audio processing and playback.
+        </p>
+        <h2>Interface Layout</h2>
+        <h3>Main Sampler Grid</h3>
+        <p>
+          Contains nine individual sound pads, each representing a different
+          audio sample.
+        </p>
+        <h3>Sidebar</h3>
+        <p>
+          Adjust global settings such as <b>equalization</b>, <b>reverb</b>, and
+          <b>master volume</b>.
+        </p>
+        <h2>Loading Sounds</h2>
+        <h3>Default Sounds</h3>
+        <p>
+          Each grid comes preloaded with a default sound file, including
+          <b>Kick</b>, <b>Snare</b>, <b>Hi-Hat (Closed)</b>, <b>Tom (Low)</b>,
+          <b>Hi-Hat (Open)</b>, <b>Tom (High)</b>, <b>Crash</b>, <b>Ride</b>,
+          and <b>Clap</b>.
+        </p>
+        <h3>Uploading Custom Sounds:</h3>
+        <p>1. Click <kbd>Upload File</kbd> in the grid.</p>
+        <p>
+          2. Upload an audio file from your device. Supported formats:
+          <b>.wav</b>, <b>.mp3</b>, <b>.ogg</b>, and <b>.flac</b>.
+        </p>
+        <p>
+          3. The uploaded file will replace the default sound for that grid.
+        </p>
+        <p>
+          <b>Note</b>: The file name will appear below the upload button as
+          confirmation.
+        </p>
+        <h2>Means of Sound Triggering</h2>
+        <h3>Mouse Interaction</h3>
+        <p>
+          Click any grid cell to play the corresponding sound. Each click
+          instantly triggers the sound.
+        </p>
+        <h3>Keyboard Shortcuts</h3>
+        <p>Sound cells can be triggered using the following keyboard layout:</p>
+        <p><kbd>Q, W, E</kbd> <b>First row (Grids 1&hyphen;3)</b></p>
+        <p><kbd>A, S, D</kbd> <b>Second row (Grids 4&hyphen;6)</b></p>
+        <p><kbd>Z, X, C</kbd> <b>Third row (Grids 7&hyphen;9)</b></p>
+        <p>
+          Each key corresponds to a specific grid cell, providing fast and
+          intuitive access to sounds.
+        </p>
+        <h2>Adjusting Volume</h2>
+        <h3>Individual Grid Volume</h3>
+        <p>
+          Use the <b>slider</b> in each grid to control its volume (0 to 10).
+        </p>
+        <h3>Master Volume</h3>
+        <p>
+          Locate the <b>Master Volume slider</b> in the <b>Sidebar</b> and
+          adjust it to control the sampler's overall volume (0 to 10).
+        </p>
+        <h2>Advanced Controls</h2>
+        <h3>Equalization (EQ)</h3>
+        <p>
+          Fine-tune the audio mix using the <b>EQ sliders</b> in the
+          <b>Sidebar</b>:
+        </p>
+        <p><b>Low</b>: Adjust bass frequencies (-10 to +10 dB).</p>
+        <p><b>Mid</b>: Adjust mid-range frequencies (-10 to +10 dB).</p>
+        <p><b>High</b>: Adjust treble frequencies (-10 to +10 dB).</p>
+        <h3>Reverb Effect</h3>
+        <p>
+          Add <b>spatial effects</b> to your sound by adjusting the
+          <b>Reverb slider</b> in the <b>Sidebar</b> (0 to 10). Higher values
+          create more reverb and spacious audio output.
+        </p>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>&copy; 2024 Sampler</span>
+    </footer>
+    <script src="./navbar.js"></script>
+  </body>
+</html>
