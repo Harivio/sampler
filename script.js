@@ -148,8 +148,3 @@ document.querySelectorAll(".file-upload").forEach((fileInput) => {
     fileNameSpan.textContent = fileName;
   });
 });
-
-document.getElementById("navbar-toggle").addEventListener("click", () => {
-  const navbarLinks = document.getElementById("navbar-links");
-  navbarLinks.classList.toggle("show");
-});
