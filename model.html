@@ -24,19 +24,19 @@
     <div class="container">
       <h1>Attribute, Object & Function Model</h1>
       <div class="container-text">
-        <h1>Objects</h1>
-        <h2>AudioContext</h2>
+        <h2>Objects</h2>
+        <h3>AudioContext</h3>
         <p>
           The <b>AudioContext object</b> represents the environment for managing
           and playing all audio within the project. It&apos;s the starting point
           for creating and processing audio.
         </p>
-        <h3>Key Attributes:</h3>
+        <h4>Key Attributes:</h4>
         <p>
           <code>state</code> Represents the current state of the AudioContext
           (e.g., <b>running</b>, <b>suspended</b>, <b>closed</b>).
         </p>
-        <h3>Key Functions:</h3>
+        <h4>Key Functions:</h4>
         <p>
           <code>createGain()</code> Creates a <b>GainNode</b> used to control
           the volume of audio.
@@ -57,16 +57,16 @@
           <code>resume()</code> <b>Resumes</b> the audio context if it is
           suspended.
         </p>
-        <h2>GainNode</h2>
+        <h3>GainNode</h3>
         <p>
           The <b>GainNode</b> is used to control the volume of an audio signal.
         </p>
-        <h3>Key Attributes:</h3>
+        <h4>Key Attributes:</h4>
         <p>
           <code>gain</code> The <b>gain (volume)</b> of the node, typically a
           value between 0 (mute) and 1 (full volume).
         </p>
-        <h3>Key Functions:</h3>
+        <h4>Key Functions:</h4>
         <p>
           <code>connect(destination)</code> <b>Connects</b> the
           <b>gain node</b> to another audio node, allowing the audio to flow
@@ -76,14 +76,14 @@
           <code>disconnect()</code> <b>Disconnects</b> the <b>gain node</b> from
           its destination, stopping the audio flow.
         </p>
-        <h2>ConvolverNode</h2>
+        <h3>ConvolverNode</h3>
         <p>
           A <b>ConvolverNode</b> is used to apply reverb effects to an audio
           signal.
         </p>
-        <h3>Key Attributes:</h3>
+        <h4>Key Attributes:</h4>
         <p><code>buffer</code> The audio buffer used for the reverb effect.</p>
-        <h3>Key Functions:</h3>
+        <h4>Key Functions:</h4>
         <p>
           <code>connect(destination)</code> <b>Connects</b> the
           <b>convolver node</b> to another audio node.
@@ -92,12 +92,12 @@
           <code>disconnect()</code> <b>Disconnects</b> the
           <b>convolver node</b> from its destination.
         </p>
-        <h2>AudioBuffer</h2>
+        <h3>AudioBuffer</h3>
         <p>
           An <b>AudioBuffer</b> represents a short audio asset residing in
           memory, used by the <b>AudioContext</b>.
         </p>
-        <h3>Key Attributes:</h3>
+        <h4>Key Attributes:</h4>
         <p>
           <code>length</code> The length of the buffer in <b>sample frames</b>.
         </p>
@@ -107,19 +107,19 @@
         <p>
           <code>sampleRate</code>The sample rate of the buffer in <b>Hz</b>.
         </p>
-        <h3>Key Functions:</h3>
+        <h4>Key Functions:</h4>
         <p>Mainly data storage.</p>
-        <h2>AudioBufferSourceNode</h2>
+        <h3>AudioBufferSourceNode</h3>
         <p>
           An <b>AudioBufferSourceNode</b> is used to play an
           <b>AudioBuffer</b> in the audio context.
         </p>
-        <h3>Key Attributes:</h3>
+        <h4>Key Attributes:</h4>
         <p>
           <code>buffer</code> The <b>audio buffer</b> that contains the sound to
           be played.
         </p>
-        <h3>Key Functions:</h3>
+        <h4>Key Functions:</h4>
         <p>
           <code>connect(destination)</code> <b>Connects</b> the
           <b>source node</b> to another <b>audio node</b>.
@@ -128,12 +128,12 @@
           <code>start()</code> Begins <b>playback</b> of the
           <b>audio buffer</b>.
         </p>
-        <h2>HTML Elements (Grids, Buttons, Sliders)</h2>
+        <h3>HTML Elements (Grids, Buttons, Sliders)</h3>
         <p>
           These elements provide the user interface for interacting with the
           sampler.
         </p>
-        <h3>Key Attributes:</h3>
+        <h4>Key Attributes:</h4>
         <p>
           <code>dataset</code> Custom data attributes used to
           <b>store sound URLs</b> and other <b>metadata</b>.
@@ -151,7 +151,7 @@
           the element, which can be manipulated to
           <b>change styles dynamically</b>.
         </p>
-        <h3>Key Functions:</h3>
+        <h4>Key Functions:</h4>
         <p>
           <code>addEventListener(event, handler)</code> Attaches an
           <b>event handler</b> to the element to listen for specific events like
@@ -173,8 +173,8 @@
           <code>classList.remove(className)</code> Removes a <b>class</b> from
           the element&apos;s <b>class list</b>.
         </p>
-        <h1>Functions</h1>
-        <h2>Initialization Functions</h2>
+        <h2>Functions</h2>
+        <h3>Initialization Functions</h3>
         <p>
           <code>initializeAudioContext()</code> This function
           <b>initializes</b> the <b>audio context</b>, making it ready to
@@ -186,7 +186,7 @@
           from the specified <b>URL</b>, decoding it for use in the
           <b>ConvolverNode</b>.
         </p>
-        <h2>Audio Functions</h2>
+        <h3>Audio Functions</h3>
         <p>
           <code>loadAudio(url)</code> <b>Fetches</b> and <b>decodes</b> audio
           data from a given URL, returning an <b>AudioBuffer</b> that can be
@@ -197,7 +197,7 @@
           source and plays it through the gain and filter nodes, producing sound
           output.
         </p>
-        <h2>Event Handlers</h2>
+        <h3>Event Handlers</h3>
         <p>
           <code>handleReverbChange(event)</code> Adjusts the
           <b>reverb gain</b> based on user input from the <b>reverb slider</b>.
