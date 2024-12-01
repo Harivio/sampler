@@ -285,12 +285,10 @@ kbd {
   border-radius: 0.25rem;
   background-color: black;
   color: white;
-  padding: 0.15rem 0.4rem;
 }
 
 code {
   border-radius: 0.25rem;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
-  padding: 0.15rem 0.4rem;
 }
