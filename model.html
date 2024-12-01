@@ -33,32 +33,29 @@
         </p>
         <h4>Key Attributes:</h4>
         <p>
-          <code>state</code><br /><br />
-          Represents the current state of the AudioContext (e.g.,
-          <b>running</b>, <b>suspended</b>, <b>closed</b>).
+          <code>state</code> Represents the current state of the AudioContext
+          (e.g., <b>running</b>, <b>suspended</b>, <b>closed</b>).
         </p>
         <h4>Key Functions:</h4>
         <p>
-          <code>createGain()</code><br /><br />
-          Creates a <b>GainNode</b> used to control the volume of audio.
+          <code>createGain()</code> Creates a <b>GainNode</b> used to control
+          the volume of audio.
         </p>
         <p>
-          <code>createBiquadFilter()</code><br /><br />
-          Creates a <b>BiquadFilterNode</b> for applying specific frequency
-          filters.
+          <code>createBiquadFilter()</code> Creates a
+          <b>BiquadFilterNode</b> for applying specific frequency filters.
         </p>
         <p>
-          <code>createConvolver()</code><br /><br />
-          Creates a <b>ConvolverNode</b> for reverb effects.
+          <code>createConvolver()</code> Creates a <b>ConvolverNode</b> for
+          reverb effects.
         </p>
         <p>
-          <code>decodeAudioData(arrayBuffer)</code><br /><br />
-          <b>Decodes</b> audio file data into a format that can be used by the
-          <b>AudioContext</b>.
+          <code>decodeAudioData(arrayBuffer)</code> <b>Decodes</b> audio file
+          data into a format that can be used by the <b>AudioContext</b>.
         </p>
         <p>
-          <code>resume()</code><br /><br />
-          <b>Resumes</b> the audio context if it is suspended.
+          <code>resume()</code> <b>Resumes</b> the audio context if it is
+          suspended.
         </p>
         <h3>GainNode</h3>
         <p>
@@ -66,20 +63,18 @@
         </p>
         <h4>Key Attributes:</h4>
         <p>
-          <code>gain</code><br /><br />
-          The <b>gain (volume)</b> of the node, typically a value between 0
-          (mute) and 1 (full volume).
+          <code>gain</code> The <b>gain (volume)</b> of the node, typically a
+          value between 0 (mute) and 1 (full volume).
         </p>
         <h4>Key Functions:</h4>
         <p>
-          <code>connect(destination)</code><br /><br />
-          <b>Connects</b> the <b>gain node</b> to another audio node, allowing
-          the audio to flow through.
+          <code>connect(destination)</code> <b>Connects</b> the
+          <b>gain node</b> to another audio node, allowing the audio to flow
+          through.
         </p>
         <p>
-          <code>disconnect()</code><br /><br />
-          <b>Disconnects</b> the <b>gain node</b> from its destination, stopping
-          the audio flow.
+          <code>disconnect()</code> <b>Disconnects</b> the <b>gain node</b> from
+          its destination, stopping the audio flow.
         </p>
         <h3>ConvolverNode</h3>
         <p>
@@ -87,18 +82,15 @@
           signal.
         </p>
         <h4>Key Attributes:</h4>
-        <p>
-          <code>buffer</code><br /><br />
-          The audio buffer used for the reverb effect.
-        </p>
+        <p><code>buffer</code> The audio buffer used for the reverb effect.</p>
         <h4>Key Functions:</h4>
         <p>
-          <code>connect(destination)</code><br /><br />
-          <b>Connects</b> the <b>convolver node</b> to another audio node.
+          <code>connect(destination)</code> <b>Connects</b> the
+          <b>convolver node</b> to another audio node.
         </p>
         <p>
-          <code>disconnect()</code><br /><br />
-          <b>Disconnects</b> the <b>convolver node</b> from its destination.
+          <code>disconnect()</code> <b>Disconnects</b> the
+          <b>convolver node</b> from its destination.
         </p>
         <h3>AudioBuffer</h3>
         <p>
@@ -107,16 +99,13 @@
         </p>
         <h4>Key Attributes:</h4>
         <p>
-          <code>length</code><br /><br />
-          The length of the buffer in <b>sample frames</b>.
+          <code>length</code> The length of the buffer in <b>sample frames</b>.
         </p>
         <p>
-          <code>duration</code><br /><br />The duration of the buffer in
-          <b>seconds</b>.
+          <code>duration</code>The duration of the buffer in <b>seconds</b>.
         </p>
         <p>
-          <code>sampleRate</code><br /><br />The sample rate of the buffer in
-          <b>Hz</b>.
+          <code>sampleRate</code>The sample rate of the buffer in <b>Hz</b>.
         </p>
         <h4>Key Functions:</h4>
         <p>Mainly data storage.</p>
@@ -127,17 +116,17 @@
         </p>
         <h4>Key Attributes:</h4>
         <p>
-          <code>buffer</code><br /><br />
-          The <b>audio buffer</b> that contains the sound to be played.
+          <code>buffer</code> The <b>audio buffer</b> that contains the sound to
+          be played.
         </p>
         <h4>Key Functions:</h4>
         <p>
-          <code>connect(destination)</code><br /><br />
-          <b>Connects</b> the <b>source node</b> to another <b>audio node</b>.
+          <code>connect(destination)</code> <b>Connects</b> the
+          <b>source node</b> to another <b>audio node</b>.
         </p>
         <p>
-          <code>start()</code><br /><br />
-          Begins <b>playback</b> of the <b>audio buffer</b>.
+          <code>start()</code> Begins <b>playback</b> of the
+          <b>audio buffer</b>.
         </p>
         <h3>HTML Elements (Grids, Buttons, Sliders)</h3>
         <p>
@@ -146,109 +135,102 @@
         </p>
         <h4>Key Attributes:</h4>
         <p>
-          <code>dataset</code><br /><br />
-          Custom data attributes used to <b>store sound URLs</b> and other
-          <b>metadata</b>.
+          <code>dataset</code> Custom data attributes used to
+          <b>store sound URLs</b> and other <b>metadata</b>.
         </p>
         <p>
-          <code>value</code><br /><br />
-          The current <b>value</b> of input elements (e.g., sliders).
+          <code>value</code> The current <b>value</b> of input elements (e.g.,
+          sliders).
         </p>
         <p>
-          <code>textContent</code><br /><br />
-          The <b>text</b> content displayed within an HTML element.
+          <code>textContent</code> The <b>text</b> content displayed within an
+          HTML element.
         </p>
         <p>
-          <code>classList</code><br /><br />
-          The list of <b>CSS classes</b> associated with the element, which can
-          be manipulated to <b>change styles dynamically</b>.
+          <code>classList</code> The list of <b>CSS classes</b> associated with
+          the element, which can be manipulated to
+          <b>change styles dynamically</b>.
         </p>
         <h4>Key Functions:</h4>
         <p>
-          <code>addEventListener(event, handler)</code><br /><br />
-          Attaches an <b>event handler</b> to the element to listen for specific
-          events like <b>clicks</b> or <b>input changes</b>.
+          <code>addEventListener(event, handler)</code> Attaches an
+          <b>event handler</b> to the element to listen for specific events like
+          <b>clicks</b> or <b>input changes</b>.
         </p>
         <p>
-          <code>querySelector(selector)</code><br /><br />
-          <b>Returns</b> the first matching element within the element.
+          <code>querySelector(selector)</code> <b>Returns</b> the first matching
+          element within the element.
         </p>
         <p>
-          <code>click()</code><br /><br />
-          Simulates a <b>mouse click</b> on the element, useful for
-          <b>triggering actions</b> programmatically.
+          <code>click()</code> Simulates a <b>mouse click</b> on the element,
+          useful for <b>triggering actions</b> programmatically.
         </p>
         <p>
-          <code>classList.add(className)</code><br /><br />
-          Adds a <b>class</b> to the element&apos;s <b>class list</b>.
+          <code>classList.add(className)</code> Adds a <b>class</b> to the
+          element&apos;s <b>class list</b>.
         </p>
         <p>
-          <code>classList.remove(className)</code><br /><br />
-          Removes a <b>class</b> from the element&apos;s <b>class list</b>.
+          <code>classList.remove(className)</code> Removes a <b>class</b> from
+          the element&apos;s <b>class list</b>.
         </p>
         <h2>Functions</h2>
         <h3>Initialization Functions</h3>
         <p>
-          <code>initializeAudioContext()</code><br /><br />
-          This function <b>initializes</b> the <b>audio context</b>, making it
-          ready to process and play audio in response to user interaction.
+          <code>initializeAudioContext()</code> This function
+          <b>initializes</b> the <b>audio context</b>, making it ready to
+          process and play audio in response to user interaction.
         </p>
         <p>
-          <code>loadReverbImpulse(url)</code><br /><br />
-          Loads a
+          <code>loadReverbImpulse(url)</code> Loads a
           <b>reverb impulse response</b>
           from the specified <b>URL</b>, decoding it for use in the
           <b>ConvolverNode</b>.
         </p>
         <h3>Audio Functions</h3>
         <p>
-          <code>loadAudio(url)</code><br /><br />
-          <b>Fetches</b> and <b>decodes</b> audio data from a given URL,
-          returning an <b>AudioBuffer</b> that can be played in the audio
-          context.
+          <code>loadAudio(url)</code> <b>Fetches</b> and <b>decodes</b> audio
+          data from a given URL, returning an <b>AudioBuffer</b> that can be
+          played in the audio context.
         </p>
         <p>
-          <code>playAudio(buffer, individualGain)</code><br /><br />
-          Creates an audio buffer source and plays it through the gain and
-          filter nodes, producing sound output.
+          <code>playAudio(buffer, individualGain)</code> Creates an audio buffer
+          source and plays it through the gain and filter nodes, producing sound
+          output.
         </p>
         <h3>Event Handlers</h3>
         <p>
-          <code>handleReverbChange(event)</code><br /><br />
-          Adjusts the <b>reverb gain</b> based on user input from the
-          <b>reverb slider</b>.
+          <code>handleReverbChange(event)</code> Adjusts the
+          <b>reverb gain</b> based on user input from the <b>reverb slider</b>.
         </p>
         <p>
-          <code>handleVolumeChange(event)</code><br /><br />
-          Adjusts the <b>master gain</b> based on user input from the
+          <code>handleVolumeChange(event)</code> Adjusts the
+          <b>master gain</b> based on user input from the
           <b>master volume slider</b>.
         </p>
         <p>
-          <code>handleEQChange(event, filterNode)</code><br /><br />
-          Adjusts the <b>equalizer filter gains</b> based on user input,
-          corresponding to the <b>low</b>, <b>mid</b>, and
-          <b>high EQ sliders</b>.
+          <code>handleEQChange(event, filterNode)</code> Adjusts the
+          <b>equalizer filter gains</b> based on user input, corresponding to
+          the <b>low</b>, <b>mid</b>, and <b>high EQ sliders</b>.
         </p>
         <p>
-          <code>handleGridClick(grid)</code><br /><br />
-          Plays the sound associated with the <b>grid element</b> and provides
-          <b>visual feedback</b> for user interaction.
+          <code>handleGridClick(grid)</code> Plays the sound associated with the
+          <b>grid element</b> and provides <b>visual feedback</b> for user
+          interaction.
         </p>
         <p>
-          <code>provideVisualFeedback(grid)</code><br /><br />
-          Provides visual feedback when a grid is clicked by adding an
-          <b>"active" class</b> to the <b>grid element</b> and then removing it
-          after a short delay.
+          <code>provideVisualFeedback(grid)</code> Provides visual feedback when
+          a grid is clicked by adding an <b>"active" class</b> to the
+          <b>grid element</b> and then removing it after a short delay.
         </p>
         <p>
-          <code>handleFileUpload(event, grid)</code><br /><br />
-          <b>Loads</b> and <b>decodes</b> an audio file uploaded by the user,
-          associating it with the corresponding grid element.
+          <code>handleFileUpload(event, grid)</code> <b>Loads</b> and
+          <b>decodes</b> an audio file uploaded by the user, associating it with
+          the corresponding grid element.
         </p>
         <p>
-          <code>handleGridVolumeChange(event, individualGain)</code><br /><br />
-          Adjusts the <b>gain</b> of the <b>individual sound</b> based on user
-          input from the <b>grid volume slider</b>.
+          <code>handleGridVolumeChange(event, individualGain)</code> Adjusts the
+          <b>gain</b> of the <b>individual sound</b> based on user input from
+          the <b>grid volume slider</b>.
         </p>
       </div>
     </div>
